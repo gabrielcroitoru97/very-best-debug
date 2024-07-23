@@ -1,6 +1,7 @@
 class MiscController < ApplicationController
   def home
-    render({ :template => "user_templates/all_users"})
+    @users_list = User.all
+    render({ :template => "misc_templates/home"})
     
   end
 end
